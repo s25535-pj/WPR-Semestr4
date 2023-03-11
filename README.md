@@ -1,1 +1,1 @@
-git init
+Repo used to upload exercises
