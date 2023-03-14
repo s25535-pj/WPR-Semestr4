@@ -16,3 +16,4 @@ echo "The dice returned number: ".throwTheDice();
 ?>
 </body>
 </html>
+<!-- http://szuflandia.pjwstk.edu.pl/~s25535/zadania-wprg/zjazd1/zadanie1-1.php -->

@@ -18,3 +18,4 @@ echo "Birth date is: ".getBirthDate("10039911001");
 ?>
 </body>
 </html>
+<!-- http://szuflandia.pjwstk.edu.pl/~s25535/zadania-wprg/zjazd1/zadanie1-4.php -->
