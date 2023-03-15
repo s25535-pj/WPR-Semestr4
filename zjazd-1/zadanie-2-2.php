@@ -15,11 +15,15 @@ function returnNationality($whoAmI){
 		"Germany"=>"German",
 		"France" => "French"
 	);
-	return $nations[$whoAmI];
+	if(array_key_exists($whoAmI, $nations)){
+		return $nations[$whoAmI];
+	} else return "Non-existent";
 }
 
-$nation = "Poland";
-echo "My nation is $nation so I'm ".returnNationality($nation).".\n";
+$nation1 = "Poland";
+$nation2 = "England";
+echo "My nation is $nation1 so I'm ".returnNationality($nation1).".\n";
+echo "My nation is $nation2 so I'm ".returnNationality($nation2).".\n";
 ?>
 </body>
 </html>
