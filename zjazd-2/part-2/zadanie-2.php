@@ -53,6 +53,9 @@
             $end_time2 = microtime(true);
             $execution_time2 = ($end_time2 - $start_time2);
             echo "<td>".$execution_time2."</td>";
+            $winner = ($execution_time1 >= $execution_time2) ? "Silnia rekurencyjne" : "Silnia nierekurencyjne";
+            $diff = abs($execution_time1 - $execution_time2);
+            echo "<tr><td>Szybsza to ".$winner."</td><td colspan='2'>Roznica = ".$diff;
         }
     ?>
 </body>
