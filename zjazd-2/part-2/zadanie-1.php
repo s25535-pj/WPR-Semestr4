@@ -37,7 +37,7 @@
             
           }
           
-          if ($_GET['date']) {
+          if (isset($_GET['date'])) {
             $date = DateTime::createFromFormat('Y-m-d', $_GET['date']);
           
             echo "Dzien tygodnia urodzin = ".dayOfBirth($date)."<br>";
