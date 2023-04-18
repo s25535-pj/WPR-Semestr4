@@ -1,0 +1,3 @@
+https://www.google.com;Google
+https://www.bing.com;Bing
+https://www.youtube.com;YouTube
