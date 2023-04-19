@@ -9,7 +9,7 @@
 
 <?php
 function calculateDiameterFromRadius($r){
-	return $r/2;
+	return $r*2;
 }
 
 echo "The diameter is: ".calculateDiameterFromRadius(10);
