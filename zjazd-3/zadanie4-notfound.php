@@ -1,0 +1,3 @@
+<?php
+    $conditionalVariable = "NOT FOUND";
+?>
