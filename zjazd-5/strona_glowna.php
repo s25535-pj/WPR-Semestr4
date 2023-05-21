@@ -3,11 +3,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
     <link type="text/css" rel="stylesheet" href="formating.css">
-    <title>Odczyt danych z bazy</title>
+    <title>Strona główna</title>
 </head>
 <body>
     <div id="buttons">
-        <form name="form" action=<?php echo $_SERVER["PHP_SELF"]?> method="POST">
+        <form name="form" action="strona_glowna.php" method="POST">
         <input type="submit" name="stronaGlowna" value="Strona glowna"></form>
 
         <form name="form" action="wszystkie_samochody.php" method="POST">

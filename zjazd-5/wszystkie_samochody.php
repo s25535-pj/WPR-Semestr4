@@ -3,14 +3,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
     <link type="text/css" rel="stylesheet" href="formating.css">
-    <title>Dodaj Samochód</title>
+    <title>Wszystkie Samochody</title>
 </head>
 <body>
     <div id="buttons">
         <form name="strona_glowna" action="strona_glowna.php" method="POST">
         <input type="submit" name="stronaGlowna" value="Strona glowna"></form>
 
-        <form name="wszystkieSamochody" action=<?php echo $_SERVER["PHP_SELF"]?> method="POST">
+        <form name="wszystkieSamochody" action="wszystkie_samochody.php" method="POST">
         <input type="submit" name="wszystkieSamochody" value="Wszystkie samochody"></form>
 
         <form name="dodajSamochod" action="dodaj_samochod.php"method="POST">
@@ -47,7 +47,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         echo "</tr>";
         while($row = mysqli_fetch_array($result["list_cars"]))
         {
-            $id = $row["id"];
             echo "<tr>";
             echo "<td>{$row["marka"]}</td>";
             echo "<td>{$row["model"]}</td>";
@@ -55,14 +54,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo "<td>{$row["rok"]}</td>";
             echo "<td>{$row["opis"]}</td>";
             echo "<td><form name='szczegolySamochodu' action='szczegoly_samochodu.php' method='GET'>";
-            echo "<input type='text' name='id_samochodu' value='$id' hidden>";
+            echo "<input type='text' name='id_samochodu' value='{$row["id"]}' hidden>";
             echo "<input type='submit' name='submit' value='Sczegóły'></form></td>";
             echo "</tr>";
         }
         echo "</table>";
-    }
-    else
-        {
+    } else {
             echo "<h2>Brak wyników!</h2>";
         }
 }
